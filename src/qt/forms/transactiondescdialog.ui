@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TransactionDescDialog</class>
+ <widget class="QDialog" name="TransactionDescDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>620</width>
+    <height>250</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">Transaction details</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog#TransactionDescDialog {
+border-image: url(':/images/ltbcbg') 0 0 0 0 stretch stretch;
+}
+
+QMessageBox {
+border-image: url(':/images/xgcendbtc') 0 0 0 0 stretch stretch;
+}
+
+QMessageBox QLabel {
+color: rgb(255, 255, 255);
+}
+
+QPushButton { /* Global Button Style */
+background-color:qlineargradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0.494318 rgba(0, 0, 0, 118));
+border:0;
+border-radius:3px;
+color:#ffffff;
+font-size:12px;
+font-weight:bold;
+padding-left:25px;
+padding-right:25px;
+padding-top:5px;
+padding-bottom:5px;
+}
+
+QPushButton:hover {
+background-color:qlineargradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0.494318 rgba(0, 0, 0, 171));
+}
+
+QPushButton:focus {
+border:none;
+outline:none;
+}
+
+QPushButton:pressed {
+border:1px solid #FFFFFF;
+}
+
+QComboBox { /* Dropdown Menus */
+border:1px solid #000000;
+padding: 3px 5px 3px 5px;
+background:#fcfcfc;
+min-height:25px;
+color:#818181;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTextEdit" name="detailText">
+     <property name="toolTip">
+      <string>This pane shows a detailed description of the transaction</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Close</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>TransactionDescDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>TransactionDescDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
